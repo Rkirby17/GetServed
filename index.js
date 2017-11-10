@@ -1,18 +1,15 @@
 const http = require('http')
 const port = 3000
 
-const requestHandler = (request, response) => {
-  console.log(request.url)
-  response.end('Hello Node.js Server!')
-}
+const path = require('path')
 
-const server = http.createServer(requestHandler)
 
-server.listen(port, (err) => {
-  if (err) {
-    return console.log('something bad happened', err)
-  }
+var express = require("express");
+var app     = express();
 
-  console.log(`server is listening on ${port}`)
-})
+app.get('/',function(req,res){
+  res.sendFile(path.join(__dirname, 'index.html'));
+  //It will find and locate index.html from View or Scripts
+});
 
+app.listen(3000)
