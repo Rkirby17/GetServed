@@ -16,9 +16,7 @@ app.set('views', path.join(__dirname, 'views'))
 
 
 app.get('/', (request, response) => {
-  response.render('home', {
-    name: 'Emerson'
-  })
+  response.render('index.html');
 })
 
 app.listen(3000)
