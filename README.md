@@ -17,12 +17,17 @@ First we need to add a few things to our software toolbelt:
 
 # Let's make a little website to host!
 (Or maybe we can use that fun timer we made last time!!!!!)
-* We need to make a local copy of the github repository that was made for this lesson first so we have somethings to work with! 
-* Open up brackets or atom
-* 
-*
-*
-*
+* We need to make a local copy of the github repository that was made for this lesson first so we have somethings to work with!
+* Open up your command line and type
+```
+git clone https://github.com/UAHakron/GetServed.git
+```
+* Open up brackets or atom and open the folder we just cloned
+* Then open up the file index.js
+* This file contains all the code of our server. We are using a framework called Express to manage the server interactions. 
+
+When a web browser contacts our server, the ```app.get``` function is called. This function simply returns back to the browser our index.html file! You can define all kinds of different functions to do different operations on the sever.
+* To start the server, simply type  ```node index.js```
 * Now that we have the backend of the website! Lets see it in our browser! Type this line into your browser: 
 ```
 localhost:3000
@@ -57,3 +62,20 @@ app.get('/',function(req,res){
 ```
 * Now we have the beginnings to an html website that could be great someday!
 * We can add tons of fun features! Lets hop on over to a great resource and see if there's anything cool we want to add! [Click me! Click me!](https://www.w3schools.com/html/default.asp)
+
+# Now that we have a little website, lets make it accessible from anywhere!
+To accomplish this we'll use a great little tool called ngrok. Typically to host a website, you would need to buy a domain name and setup your server on a cloud platform; I'll show you how to do that in a little bit.
+
+BUT if you don't want to pay for all that hosting and you're say, at a hackathon, you can use something like ngork instead. Ngrok connects your local server (the one that we say on localhost:3000) to the internet at large. 
+
+* First unzip the ngrok file you downloaded before and save it at a convenient location
+* Start your server like we did above, with 
+ ```
+ node index.js
+ ```
+ * Double click on the ngrok file you downloaded and a comand prompt will open
+ * Finally, type 
+ ```
+ ngrok.exe http -3000
+```
+* Then navigate to the link ngrok created, and BOOM there's your website, on the internet for everyone to enjoy! :)
