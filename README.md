@@ -27,7 +27,10 @@ git clone https://github.com/UAHakron/GetServed.git
 * This file contains all the code of our server. We are using a framework called Express to manage the server interactions. 
 
 When a web browser contacts our server, the ```app.get``` function is called. This function simply returns back to the browser our index.html file! You can define all kinds of different functions to do different operations on the sever.
-* To start the server, simply type  ```node index.js```
+* Before we can start the server, we need to install one more thing through NPM, so back to the command line!
+
+NPM stands for Node Package Manger and its a way to manage packages used by Node.js. The one package we need here is called Express js. To install it, type ```npm install -g express```
+* To start the server type  ```node index.js``` into the command line
 * Now that we have the backend of the website! Lets see it in our browser! Type this line into your browser: 
 ```
 localhost:3000
@@ -64,12 +67,12 @@ app.get('/',function(req,res){
 * We can add tons of fun features! Lets hop on over to a great resource and see if there's anything cool we want to add! [Click me! Click me!](https://www.w3schools.com/html/default.asp)
 
 # Now that we have a little website, lets make it accessible from anywhere!
-To accomplish this we'll use a great little tool called ngrok. Typically to host a website, you would need to buy a domain name and setup your server on a cloud platform; I'll show you how to do that in a little bit.
+To accomplish this we'll use a great tool called ngrok. Typically to host a website, you would need to buy a domain name and setup your server on a cloud platform; I'll show you how to do that in a little bit.
 
 BUT if you don't want to pay for all that hosting and you're say, at a hackathon, you can use something like ngork instead. Ngrok connects your local server (the one that we say on localhost:3000) to the internet at large. 
 
-* First unzip the ngrok file you downloaded before and save it at a convenient location
-* Start your server like we did above, with 
+* First unzip the ngrok file you downloaded before and save it at a convenient location like your Desktop
+* Start your server like we did above in the GetServed directory, with 
  ```
  node index.js
  ```
