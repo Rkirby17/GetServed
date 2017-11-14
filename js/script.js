@@ -1,3 +1,5 @@
+window.onload = function() {
+
     const startButton = document.querySelector('[data-action="start"]');
     const stopButton  = document.querySelector('[data-action="stop"]');
     const lapButton   = document.querySelector('[data-action="lap"]');
@@ -9,6 +11,11 @@
     let interval;    
     var laps = document.getElementById('laps');
     var lastLap = { minutes: 0, seconds: 0};
+    
+
+    function sayhi(){
+        alert('hi');
+    }
     function startTimer() {
       if (isRunning) return;
       isRunning = true;
@@ -56,3 +63,4 @@
     stopButton.addEventListener('click', stopTimer);
     resetButton.addEventListener('click', resetTimer);
     lapButton.addEventListener('click', addLap);
+}
