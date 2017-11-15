@@ -44,7 +44,7 @@ localhost:3000
 # Let's make our *own* website!
 * Lets look at a new file called itme.html
 * We can host it locally with the index.js file to see what it does 
-* We'll just have to change a few lines!!1 Erase lines 17-25. AKA, these ones:
+* We'll just have to change a few lines!!1 Erase lines 18-26. AKA, these ones:
 ```
 app.get('/js/:filename', function(req, res) {
     console.log(req.params.filename);
@@ -79,6 +79,6 @@ BUT if you don't want to pay for all that hosting and you're say, at a hackathon
  * Double click on the ngrok file you downloaded and a comand prompt will open
  * Finally, type 
  ```
- ngrok.exe http -3000
+ ngrok.exe http 3000
 ```
 * Then navigate to the link ngrok created, and BOOM there's your website, on the internet for everyone to enjoy! :)

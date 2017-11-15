@@ -1,13 +1,14 @@
 const http = require('http');
+const path = require('path');
+var express = require("express");
+
 const port = 3000;
 
-const path = require('path');
-
-
-var express = require("express");
 var app     = express();
+
 // var js      = require('js/script.js');
 //js.sayhi();
+
 app.get('/',function(req,res){
   res.sendFile(path.join(__dirname, 'index.html'));
   //It will find and locate index.html from View or Scripts
